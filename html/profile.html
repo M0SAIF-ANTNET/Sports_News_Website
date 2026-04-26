@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Profile</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+<div class="container">
+    <a href="profiles.html">← Back</a>
+    <h1 id="name"></h1>
+    <img id="img" style="width:300px;border-radius:10px;">
+    <p id="bio"></p>
+</div>
+<script>
+const players = {
+    messi: {
+        name: "Lionel Messi",
+        img: "../images/Players/Lionel-Messi.webp",
+        bio: "Argentine footballer, considered one of the greatest players in history. Won multiple Ballon d'Or awards."
+    },
+    ronaldo: {
+        name: "Cristiano Ronaldo",
+        img: "../images/Players/cristiano.jpg",
+        bio: "Portuguese footballer known for speed, strength, and goal scoring. Played for Man United, Real Madrid, and Al Nassr."
+    },
+    neymar: {
+        name: "Neymar Jr",
+        img: "../images/Players/neymar.jpg",
+        bio: "Brazilian forward known for dribbling skills and creativity. Played for Barcelona and PSG."
+    }
+};
+const params = new URLSearchParams(window.location.search);
+const player = params.get("player");
+if (players[player]) {
+    document.getElementById("name").innerText = players[player].name;
+    document.getElementById("img").src = players[player].img;
+    document.getElementById("bio").innerText = players[player].bio;
+}
+</script>
+</body>
+</html>
