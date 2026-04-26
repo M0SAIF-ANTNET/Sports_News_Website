@@ -1,0 +1,21 @@
+.stats {
+    margin-top: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.chart {
+    margin-top: 30px;
+}
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
