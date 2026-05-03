@@ -1,0 +1,74 @@
+<!-- Omar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-logo"></div>
+      <h1>Create account</h1>
+      <p>Join us — it only takes a moment</p>
+    </div>
+
+    <div class="form-group">
+      <div class="field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Jane Smith" autocomplete="name" />
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" autocomplete="email" />
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Min. 8 characters" autocomplete="new-password" />
+      </div>
+
+      <div class="field">
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm" placeholder="Repeat your password" autocomplete="new-password" />
+      </div>
+    </div>
+
+    <button class="btn-primary" onclick="handleRegister()">Create Account</button>
+
+    <div class="card-footer">
+      Already have an account? <a href="login.html">Sign in</a>
+    </div>
+  </div>
+
+  <script>
+    function handleRegister() {
+      const name     = document.getElementById('name').value.trim();
+      const email    = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirm  = document.getElementById('confirm').value;
+
+      if (!name || !email || !password || !confirm) {
+        alert('Please fill in all fields.');
+        return;
+      }
+      if (password !== confirm) {
+        alert('Passwords do not match.');
+        return;
+      }
+      if (password.length < 8) {
+        alert('Password must be at least 8 characters.');
+        return;
+      }
+      alert('Account created successfully! (demo)');
+    }
+  </script>
+
+</body>
+</html>
