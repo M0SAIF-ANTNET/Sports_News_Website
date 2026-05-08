@@ -316,3 +316,43 @@ body {
     font-size: 0.9rem;
     color: var(--text);
 }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.news-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+.news-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.all-news-btn {
+    text-align: center;
+    margin-top: 30px;
+}
