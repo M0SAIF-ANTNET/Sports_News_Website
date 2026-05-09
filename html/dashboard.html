@@ -1,3 +1,6 @@
+
+<!-- M.Hamouda -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +86,6 @@
     </main>
 
 <script>
-    // 1. قاعدة البيانات (زي ما هي تماماً)
     const teamsData = {
         ahly: {
             winRate: "75%",
@@ -113,8 +115,6 @@
     function initDashboard() {
         const ctx1 = document.getElementById('performanceChart').getContext('2d');
         const ctx2 = document.getElementById('goalsPieChart').getContext('2d');
-
-        // Bar Chart (زي ما هو، بس ضفنا box-sizing)
         perfChart = new Chart(ctx1, {
             type: 'bar',
             data: {
@@ -134,10 +134,6 @@
                 }
             }
         });
-
-        // ==========================================
-        // Doughnut Chart - التعديل هنا لحل مشكلة الـ Legend
-        // ==========================================
         goalChart = new Chart(ctx2, {
             type: 'doughnut',
             data: {
@@ -151,21 +147,19 @@
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                // تعديلات الـ Layout لضبط الـ Legend
                 plugins: {
                     legend: {
-                        position: 'bottom', // مكان الـ Legend
-                        align: 'center',    /* نوسط الـ items */
+                        position: 'bottom', 
+                        align: 'center',    
                         labels: {
-                            color: '#7a7870', /* لون الكلام */
+                            color: '#7a7870', 
                             font: {
-                                size: 12,    /* حجم الخط */
-                                family: "'SF Pro Display', sans-serif" /* نفس فونت الموقع */
+                                size: 12,    
+                                family: "'SF Pro Display', sans-serif" 
                             },
-                            // 1. أهم جزء: ندي الـ Label مساحة عرض كافية عشان الكلام يبان
-                            usePointStyle: false, /* نستخدم مربعات بدل نقط */
-                            padding: 15,       /* مسافة بين المربعات */
-                            boxWidth: 15       /* عرض المربع */
+                            usePointStyle: false, 
+                            padding: 15,       
+                            boxWidth: 15       
                         }
                     },
                     tooltip: {
@@ -175,25 +169,19 @@
             }
         });
     }
-
     function updateDashboard(teamKey) {
         const data = teamsData[teamKey];
         if(!data) return;
-
         document.getElementById('winRate').innerText = data.winRate;
         document.getElementById('totalGoals').innerText = data.goals;
         document.getElementById('cleanSheets').innerText = data.cleanSheets;
-
         perfChart.data.datasets[0].data = data.performance;
         perfChart.update();
-
         goalChart.data.datasets[0].data = data.distribution;
         goalChart.update();
     }
-
     document.addEventListener('DOMContentLoaded', () => {
         initDashboard();
-        
         document.getElementById('teamSelect').addEventListener('change', (e) => {
             updateDashboard(e.target.value);
         });

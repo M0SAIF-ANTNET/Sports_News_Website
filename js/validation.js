@@ -1,3 +1,6 @@
+
+// M.Abdelsamea
+
 document.addEventListener('DOMContentLoaded', () => {
     const authForm = document.querySelector('.auth-form');
     
