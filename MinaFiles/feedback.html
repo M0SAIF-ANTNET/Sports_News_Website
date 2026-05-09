@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback – Sports News</title>
+  <link rel="stylesheet" href="../CSS/global.css"/>
+  <link rel="stylesheet" href="../CSS/components.css"/>
+  <link rel="stylesheet" href="../CSS/layout.css"/>
+  <link rel="stylesheet" href="../CSS/responsive.css"/>
+  <style>
+    /* Star Rating */
+    .star-rating { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 4px; }
+    .star-rating input { display: none; }
+    .star-rating label { font-size: 2rem; color: #ccc; cursor: pointer; transition: color 0.2s; }
+    .star-rating label:hover,
+    .star-rating label:hover ~ label,
+    .star-rating input:checked ~ label { color: var(--color-highlight); }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div><strong>⚡ Sports News</strong></div>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding: 60px 20px; background-color: var(--color-secondary);">
+    <h1 style="color: #fff;">Your Feedback</h1>
+    <p style="color: var(--color-light); margin-top: 10px;">
+      Help us improve — tell us what you think about Sports News.
+    </p>
+  </section>
+
+  <!-- Main -->
+  <div class="container" style="padding: 40px 20px; max-width: 650px;">
+
+    <div class="card" style="text-align: left;">
+      <h2 style="margin-bottom: 20px;">Leave a Review</h2>
+
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+
+        <!-- Star Rating -->
+        <div>
+          <label style="display:block; font-weight:600; margin-bottom:8px;">
+            Rate Your Experience (Optional)
+          </label>
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5"/><label for="star5">★</label>
+            <input type="radio" id="star4" name="rating" value="4"/><label for="star4">★</label>
+            <input type="radio" id="star3" name="rating" value="3"/><label for="star3">★</label>
+            <input type="radio" id="star2" name="rating" value="2"/><label for="star2">★</label>
+            <input type="radio" id="star1" name="rating" value="1"/><label for="star1">★</label>
+          </div>
+        </div>
+
+        <!-- Category -->
+        <div>
+          <label for="category" style="display:block; font-weight:600; margin-bottom:8px;">
+            Feedback Category (Optional)
+          </label>
+          <select id="category"
+            style="width:100%; padding:10px 14px; border:1px solid #ccc; border-radius:var(--radius-sm); font-size:1rem; font-family:var(--font-body);">
+            <option value="">– Select a category –</option>
+            <option value="content">Content Quality</option>
+            <option value="design">Website Design</option>
+            <option value="speed">Page Speed</option>
+            <option value="coverage">Sports Coverage</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- Comment -->
+        <div>
+          <label for="comment" style="display:block; font-weight:600; margin-bottom:8px;">
+            Your Comment
+          </label>
+          <textarea id="comment" rows="5" placeholder="Share your thoughts or suggestions..."
+            style="width:100%; padding:10px 14px; border:1px solid #ccc; border-radius:var(--radius-sm); font-size:1rem; font-family:var(--font-body); resize:vertical;"></textarea>
+        </div>
+
+        <div>
+          <button class="btn" onclick="submitFeedback()">Submit Feedback</button>
+        </div>
+
+        <p id="feedbackSuccess" style="display:none; color:var(--color-primary); font-weight:600;">
+          🎉 Thank you for your feedback! We really appreciate it.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background-color: var(--color-secondary); color: #fff; text-align: center; padding: 20px; margin-top: 60px;">
+    <p style="color: #fff;">&copy; 2025 Sports News. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function submitFeedback() {
+      const comment = document.getElementById('comment').value.trim();
+      if (!comment) { alert('Please write a comment before submitting.'); return; }
+      document.getElementById('feedbackSuccess').style.display = 'block';
+      document.getElementById('comment').value  = '';
+      document.getElementById('category').value = '';
+      document.querySelectorAll('.star-rating input').forEach(r => r.checked = false);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Sports News</title>
+  <link rel="stylesheet" href="../CSS/global.css"/>
+  <link rel="stylesheet" href="../CSS/components.css"/>
+  <link rel="stylesheet" href="../CSS/layout.css"/>
+  <link rel="stylesheet" href="../CSS/responsive.css"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div><strong>⚡ Sports News</strong></div>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding: 60px 20px; background-color: var(--color-secondary);">
+    <h1 style="color: #fff;">Contact Us</h1>
+    <p style="color: var(--color-light); margin-top: 10px;">
+      Got a tip or question? We'd love to hear from you.
+    </p>
+  </section>
+
+  <!-- Main -->
+  <div class="container" style="padding: 40px 20px;">
+    <div class="cards" style="align-items: start;">
+
+      <!-- Contact Form -->
+      <div class="card" style="text-align: left; grid-column: span 2;">
+        <h2 style="margin-bottom: 20px;">Send a Message</h2>
+
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+
+          <div>
+            <label for="name" style="display:block; font-weight:600; margin-bottom:5px;">Full Name</label>
+            <input type="text" id="name" placeholder="e.g. Ahmed Mohamed"
+              style="width:100%; padding:10px 14px; border:1px solid #ccc; border-radius:var(--radius-sm); font-size:1rem; font-family:var(--font-body);" />
+          </div>
+
+          <div>
+            <label for="email" style="display:block; font-weight:600; margin-bottom:5px;">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com"
+              style="width:100%; padding:10px 14px; border:1px solid #ccc; border-radius:var(--radius-sm); font-size:1rem; font-family:var(--font-body);" />
+          </div>
+
+          <div>
+            <label for="message" style="display:block; font-weight:600; margin-bottom:5px;">Message</label>
+            <textarea id="message" rows="5" placeholder="Write your message here..."
+              style="width:100%; padding:10px 14px; border:1px solid #ccc; border-radius:var(--radius-sm); font-size:1rem; font-family:var(--font-body); resize:vertical;"></textarea>
+          </div>
+
+          <div>
+            <button class="btn" onclick="submitContact()">Send Message</button>
+          </div>
+
+          <p id="contactSuccess" style="display:none; color:var(--color-primary); font-weight:600;">
+            ✅ Message sent successfully! We'll get back to you soon.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="card" style="text-align: left;">
+        <h2 style="margin-bottom: 20px;">Get in Touch</h2>
+
+        <p><strong>📧 Email</strong><br/>contact@sportsnews.com</p>
+        <p style="margin-top: 15px;"><strong>📞 Phone</strong><br/>+20 100 123 4567</p>
+        <p style="margin-top: 15px;"><strong>📍 Address</strong><br/>Cairo, Egypt</p>
+        <p style="margin-top: 15px;"><strong>🕐 Working Hours</strong><br/>Sat – Thu, 9 AM – 6 PM</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background-color: var(--color-secondary); color: #fff; text-align: center; padding: 20px; margin-top: 60px;">
+    <p style="color: #fff;">&copy; 2025 Sports News. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function submitContact() {
+      const name    = document.getElementById('name').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if (!name || !email || !message) { alert('Please fill in all fields.'); return; }
+      document.getElementById('contactSuccess').style.display = 'block';
+      document.getElementById('name').value    = '';
+      document.getElementById('email').value   = '';
+      document.getElementById('message').value = '';
+    }
+  </script>
+
+</body>
+</html>
