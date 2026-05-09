@@ -11,21 +11,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-    <nav>
-        <div class="container nav-container">
-            <div class="logo">SPORTS<span>NEWS</span></div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="match-center.html">Match Center</a></li>
-                <li><a href="players.html" class="active">Players</a></li>
-            </ul>
+<nav>
+    <div class="container nav-container">
+        <div class="logo">SPORTS<span>NEWS</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="match-center.html">Match Center</a></li>
+            <li><a href="calendar.html">Schedule</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="about.html" >About</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="login.html" class="btn-login">Login</a>
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
-    </nav>
-
+    </div>
+</nav>
     <main class="container pt-4">
-        <a href="players.html" class="btn btn-outline mb-4"><i class="fas fa-arrow-left"></i> Back to Players</a>
+        <a href="profiles.html" class="btn btn-outline mb-4"><i class="fas fa-arrow-left"></i> Back to Players</a>
 
         <div class="player-profile-wrapper">
             <div class="profile-aside">
@@ -97,13 +104,27 @@
             document.getElementById("img").src = p.img;
             document.getElementById("bio").innerText = p.bio;
             
-            // تحديث الإحصائيات
             document.getElementById("stat-goals").innerText = p.stats.goals;
             document.getElementById("stat-assists").innerText = p.stats.assists;
             document.getElementById("stat-apps").innerText = p.stats.apps;
         } else {
-            window.location.href = 'players.html'; // رجوع لو اللاعب مش موجود
+            window.location.href = 'players.html';
         }
     </script>
+<footer style="width: 100%; background-color: var(--color-secondary); color: #fff; text-align: center; padding: 20px; margin-top: 50px; box-sizing: border-box;">
+    <p style="color: #fff; margin: 0;">
+        &copy; 2025 HNU Sports News. All rights reserved.
+    </p>
+    <div style="display: flex; justify-content: center; gap: 30px; margin-top: 10px;">
+        <a href="feedback.html"
+           style="color: #fff; text-decoration: underline; font-weight: 500;">
+           Feedback
+        </a>
+        <a href="contact.html"
+           style="color: #fff; text-decoration: underline; font-weight: 500;">
+           Contact
+        </a>
+    </div>
+</footer>
 </body>
 </html>

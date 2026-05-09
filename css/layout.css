@@ -87,7 +87,7 @@
 .mini-match-card {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 1rem;
     padding: 1rem;
     background: var(--color-surface);
@@ -95,6 +95,17 @@
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.team img {
+    display: block;
+    height: auto;
 }
 
 .mini-match-card:hover {

@@ -31,6 +31,9 @@
             <li><a href="news.html">News</a></li>
             <li><a href="match-center.html">Match Center</a></li>
             <li><a href="calendar.html">Schedule</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
         <div class="nav-actions">
             <a href="login.html" class="btn-login">Login</a>
@@ -118,36 +121,35 @@
                 <h2><i class="fas fa-gamepad"></i> Match Center</h2>
                 <a href="match-center.html" class="view-all">Live Center <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="match-preview-grid">
+        <div class="match-preview-grid">
                 <div class="mini-match-card">
-                    <div class="team">
-                        <img src="../images/liv.png" alt="Liverpool" width="30">
+                    <div class="team team-left">
+                        <img src="../images/liverpool.png" alt="Liverpool" width="30">
                         <span>LIV</span>
                     </div>
                     <div class="score">2 - 1</div>
-                    <div class="team">
+                    <div class="team team-right">
                         <span>RMA</span>
-                        <img src="../images/rma.png" alt="Real Madrid" width="30">
+                        <img src="../images/real_madrid.png" alt="Real Madrid" width="30">
                     </div>
                     <div class="match-status live">Live 75'</div>
                 </div>
+            
                 <div class="mini-match-card">
-                    <div class="team">
-                        <img src="../images/bar.png" alt="Barca" width="30">
+                    <div class="team team-left">
+                        <img src="../images/barcelona.png" alt="Barca" width="30">
                         <span>BAR</span>
                     </div>
                     <div class="score">3 - 0</div>
-                    <div class="team">
+                    <div class="team team-right">
                         <span>ATM</span>
-                        <img src="../images/atm.png" alt="Atletico" width="30">
+                        <img src="../images/Atletico-Madrid-.png" alt="Atletico" width="30">
                     </div>
-                    <div class="match-status">Finished</div>
+                    <div class="match-status">Full Time</div>
                 </div>
             </div>
         </section>
-
         <hr class="section-divider">
-
         <section id="profiles-preview" class="pt-4 mb-4">
             <div class="section-header">
                 <h2><i class="fas fa-users"></i> Top Players</h2>
@@ -155,20 +157,19 @@
             </div>
             <div class="profiles-mini-list">
                 <div class="profile-thumb">
-                    <img src="../images/player1.png" alt="Player">
-                    <h4>Mo Salah</h4>
+                    <img src="../images\Players\cristiano.jpg" alt="Player">
+                    <h4>Cristiano</h4>
                     <p>Stats: 22 Goals</p>
-                    <a href="profile.html">View Stats</a>
+                    <a href="profile.html?player=ronaldo">View Stats</a>
                 </div>
                 <div class="profile-thumb">
-                    <img src="../images/player2.png" alt="Player">
-                    <h4>Lamine Yamal</h4>
+                    <img src="../images\Players\Lionel-Messi.webp" alt="Player">
+                    <h4>Messi</h4>
                     <p>Stats: 15 Assists</p>
-                    <a href="profile.html">View Stats</a>
+                    <a href="profile.html?player=messi">View Stats</a>
                 </div>
             </div>
         </section>
-
         <section class="dashboard-banner">
             <div class="db-content">
                 <h3>Your Personal Sports Dashboard</h3>
@@ -176,10 +177,24 @@
                 <a href="dashboard.html" class="btn btn-primary">Go to My Dashboard</a>
             </div>
         </section>
-
     </main>
-
     <script src="../js/main.js"></script>
     <script src="../js/theme_switcher.js"></script>
+
+<footer style="width: 100%; background-color: var(--color-secondary); color: #fff; text-align: center; padding: 20px; margin-top: 50px; box-sizing: border-box;">
+    <p style="color: #fff; margin: 0;">
+        &copy; 2025 HNU Sports News. All rights reserved.
+    </p>
+    <div style="display: flex; justify-content: center; gap: 30px; margin-top: 10px;">
+        <a href="feedback.html"
+           style="color: #fff; text-decoration: underline; font-weight: 500;">
+           Feedback
+        </a>
+        <a href="contact.html"
+           style="color: #fff; text-decoration: underline; font-weight: 500;">
+           Contact
+        </a>
+    </div>
+</footer>
 </body>
 </html>

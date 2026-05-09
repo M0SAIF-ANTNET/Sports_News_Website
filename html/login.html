@@ -40,15 +40,18 @@
     </div>
 
     <script>
-        function handleLogin() {
-            const email    = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            if (!email || !password) {
-                alert('Please fill in all fields.');
-                return;
-            }
-            alert('Login successful! (demo)');
+    function handleLogin() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+    
+        if (!email || !password) {
+            alert('Please fill in all fields.');
+            return;
         }
+    
+        // Direct redirect to index.html
+        window.location.href = "index.html";
+    }
     </script>
 
 </body>
