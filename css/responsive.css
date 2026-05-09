@@ -1,49 +1,10 @@
-@media (max-width: 768px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
+/* ============================================================
+   RESPONSIVE.CSS
+   Breakpoint overrides only — no base styles redefined here.
+   Load order: global → components → layout → responsive
+   ============================================================ */
 
-    .profiles {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Omar's Part */
-@media (max-width: 480px) {
-  body {
-    padding: 1rem;
-    align-items: flex-start;
-    padding-top: 2rem;
-  }
-
-  .card {
-    padding: 2rem 1.5rem;
-    border-radius: 16px;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .card-header h1 {
-    font-size: 1.5rem;
-  }
-
-  .form-group {
-    gap: 1rem;
-  }
-
-  .field input {
-    padding: 0.8rem 0.9rem;
-    font-size: 1rem;
-  }
-
-  .btn-primary {
-    padding: 1rem;
-    font-size: 1rem;
-  }
-
-}
-/* Tablet */
+/* ── Tablet  (≤ 992px) ───────────────────────────────────── */
 @media (max-width: 992px) {
 
     .cards {
@@ -52,11 +13,16 @@
 
 }
 
-/* Mobile */
+/* ── Mobile  (≤ 768px) ───────────────────────────────────── */
 @media (max-width: 768px) {
 
     .cards {
         grid-template-columns: 1fr;
+    }
+
+    .profiles {
+        flex-direction: column;
+        align-items: center;
     }
 
     .teams {
@@ -71,16 +37,11 @@
 
 }
 
-/* Small Mobile */
+/* ── Small Mobile  (≤ 480px) ─────────────────────────────── */
 @media (max-width: 480px) {
 
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.4rem; }
 
     .card {
         padding: 15px;
@@ -89,6 +50,36 @@
     .team-logo {
         width: 60px;
         height: 60px;
+    }
+
+    /* Auth page adjustments */
+    .auth-page {
+        align-items: flex-start;
+        padding-top: 2rem;
+    }
+
+    .auth-card {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+        max-width: 100%;
+    }
+
+    .card-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-group {
+        gap: 1rem;
+    }
+
+    .field input {
+        padding: 0.8rem 0.9rem;
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        padding: 1rem;
+        font-size: 1rem;
     }
 
 }
