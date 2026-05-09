@@ -458,3 +458,28 @@ table tr:hover {
     font-size: 0.9rem;
     color: #f0ece4;
 }
+
+/* ── Statistics Bars ────────────────────────────────────── */
+
+.chart {
+    background: var(--color-surface);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.bar {
+    height: 40px;
+    margin: 15px 0;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.bar--90 { width: 90%; }
+.bar--70 { width: 70%; }
+.bar--50 { width: 50%; }
