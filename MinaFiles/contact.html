@@ -10,18 +10,6 @@
   <link rel="stylesheet" href="../CSS/responsive.css"/>
 </head>
 <body>
-
-  <!-- Navigation -->
-  <nav>
-    <div><strong>⚡ Sports News</strong></div>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="feedback.html">Feedback</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
   <section class="hero" style="padding: 60px 20px; background-color: var(--color-secondary);">
     <h1 style="color: #fff;">Contact Us</h1>
     <p style="color: var(--color-light); margin-top: 10px;">
@@ -29,11 +17,8 @@
     </p>
   </section>
 
-  <!-- Main -->
   <div class="container" style="padding: 40px 20px;">
     <div class="cards" style="align-items: start;">
-
-      <!-- Contact Form -->
       <div class="card" style="text-align: left; grid-column: span 2;">
         <h2 style="margin-bottom: 20px;">Send a Message</h2>
 
@@ -62,13 +47,12 @@
           </div>
 
           <p id="contactSuccess" style="display:none; color:var(--color-primary); font-weight:600;">
-            ✅ Message sent successfully! We'll get back to you soon.
+            Message sent successfully! We'll get back to you soon.
           </p>
 
         </div>
       </div>
 
-      <!-- Contact Info -->
       <div class="card" style="text-align: left;">
         <h2 style="margin-bottom: 20px;">Get in Touch</h2>
 
@@ -81,11 +65,10 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer style="background-color: var(--color-secondary); color: #fff; text-align: center; padding: 20px; margin-top: 60px;">
-    <p style="color: #fff;">&copy; 2025 Sports News. All rights reserved.</p>
-  </footer>
 
+<footer style="position: fixed; bottom: 0; width: 100%; background-color: var(--color-secondary); color: #fff; text-align: center; padding: 20px;">
+  <p style="color: #fff; margin: 0;">&copy; 2025 Sports News. All rights reserved.</p>
+</footer>
   <script>
     function submitContact() {
       const name    = document.getElementById('name').value.trim();

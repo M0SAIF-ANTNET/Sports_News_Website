@@ -20,17 +20,6 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <div><strong>⚡ Sports News</strong></div>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="feedback.html">Feedback</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
   <section class="hero" style="padding: 60px 20px; background-color: var(--color-secondary);">
     <h1 style="color: #fff;">Your Feedback</h1>
     <p style="color: var(--color-light); margin-top: 10px;">
@@ -38,15 +27,10 @@
     </p>
   </section>
 
-  <!-- Main -->
   <div class="container" style="padding: 40px 20px; max-width: 650px;">
-
     <div class="card" style="text-align: left;">
       <h2 style="margin-bottom: 20px;">Leave a Review</h2>
-
       <div style="display: flex; flex-direction: column; gap: 20px;">
-
-        <!-- Star Rating -->
         <div>
           <label style="display:block; font-weight:600; margin-bottom:8px;">
             Rate Your Experience (Optional)
@@ -60,7 +44,6 @@
           </div>
         </div>
 
-        <!-- Category -->
         <div>
           <label for="category" style="display:block; font-weight:600; margin-bottom:8px;">
             Feedback Category (Optional)
@@ -76,7 +59,6 @@
           </select>
         </div>
 
-        <!-- Comment -->
         <div>
           <label for="comment" style="display:block; font-weight:600; margin-bottom:8px;">
             Your Comment
@@ -97,9 +79,8 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer style="background-color: var(--color-secondary); color: #fff; text-align: center; padding: 20px; margin-top: 60px;">
-    <p style="color: #fff;">&copy; 2025 Sports News. All rights reserved.</p>
+  <footer style="position: fixed; bottom: 0; width: 100%; background-color: var(--color-secondary); color: #fff; text-align: center; padding: 20px;">
+    <p style="color: #fff; margin: 0;">&copy; 2025 Sports News. All rights reserved.</p>
   </footer>
 
   <script>
@@ -112,6 +93,5 @@
       document.querySelectorAll('.star-rating input').forEach(r => r.checked = false);
     }
   </script>
-
 </body>
 </html>
