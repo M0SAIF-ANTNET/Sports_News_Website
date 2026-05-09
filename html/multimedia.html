@@ -3,64 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multimedia – Sports News</title>
+    <title>Multimedia Hub – Sports News</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1 class="mb-3">Sports Multimedia</h1>
-
-        <!-- Team Logos Grid -->
-        <div class="cards">
-            <div class="card">
-                <img src="../images/al_ahly_eg.png" alt="Al Ahly Egypt" class="team-logo">
-                <h3>Al Ahly Egypt</h3>
-            </div>
-            <div class="card">
-                <img src="../images/el_zamalek.png" alt="El Zamalek" class="team-logo">
-                <h3>El Zamalek</h3>
-            </div>
-            <div class="card">
-                <img src="../images/al_nasr.png" alt="Al Nassr" class="team-logo">
-                <h3>Al Nassr</h3>
-            </div>
-            <div class="card">
-                <img src="../images/al_ahly_sa.png" alt="Al Ahly Saudi" class="team-logo">
-                <h3>Al Ahly Saudi</h3>
-            </div>
-            <div class="card">
-                <img src="../images/barcelona.png" alt="Barcelona" class="team-logo">
-                <h3>Barcelona</h3>
-            </div>
-            <div class="card">
-                <img src="../images/real_madrid.png" alt="Real Madrid" class="team-logo">
-                <h3>Real Madrid</h3>
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">SPORTS<span>NEWS</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="multimedia.html" class="active">Multimedia</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
             </div>
         </div>
+    </nav>
 
-        <!-- Videos -->
-        <h2 class="mt-4">Videos</h2>
-        <div class="cards">
-            <div class="card">
-                <a href="https://youtu.be/H8M2K5ESxd8" target="_blank" rel="noopener">
-                    <img src="https://img.youtube.com/vi/H8M2K5ESxd8/maxresdefault.jpg" alt="Match Highlights">
-                </a>
-                <h3>Match Highlights</h3>
-                <a href="https://youtu.be/H8M2K5ESxd8" target="_blank" rel="noopener" class="btn">Watch Video</a>
-            </div>
-            <div class="card">
-                <a href="https://youtu.be/J2PPhxLLtX8" target="_blank" rel="noopener">
-                    <img src="https://img.youtube.com/vi/J2PPhxLLtX8/maxresdefault.jpg" alt="Sports Highlights">
-                </a>
-                <h3>Match Highlights</h3>
-                <a href="https://youtu.be/J2PPhxLLtX8" target="_blank" rel="noopener" class="btn">Watch Video</a>
+    <main class="container pt-4">
+        <div class="section-header">
+            <h1><i class="fas fa-photo-video"></i> Multimedia Hub</h1>
+            <p>Your destination for the latest highlights, club identities, and exclusive media content.</p>
+        </div>
+
+        <div class="media-tabs mb-4">
+            <button class="tab-btn active" onclick="filterMedia('all')">All Content</button>
+            <button class="tab-btn" onclick="filterMedia('logos')">Team Logos</button>
+            <button class="tab-btn" onclick="filterMedia('videos')">Match Highlights</button>
+        </div>
+
+        <div id="logos-section" class="media-group">
+            <h2 class="sub-header"><i class="fas fa-shield-alt"></i> Featured Clubs</h2>
+            <div class="logo-grid">
+                <div class="logo-card card">
+                    <img src="../images/al_ahly_eg.png" alt="Al Ahly Egypt">
+                    <h3>Al Ahly Egypt</h3>
+                </div>
+                <div class="logo-card card">
+                    <img src="../images/el_zamalek.png" alt="El Zamalek">
+                    <h3>El Zamalek</h3>
+                </div>
+                <div class="logo-card card">
+                    <img src="../images/al_nasr.png" alt="Al Nassr">
+                    <h3>Al Nassr</h3>
+                </div>
+                <div class="logo-card card">
+                    <img src="../images/al_ahly_sa.png" alt="Al Ahly Saudi">
+                    <h3>Al Ahly Saudi</h3>
+                </div>
+                <div class="logo-card card">
+                    <img src="../images/barcelona.png" alt="Barcelona">
+                    <h3>Barcelona</h3>
+                </div>
+                <div class="logo-card card">
+                    <img src="../images/real_madrid.png" alt="Real Madrid">
+                    <h3>Real Madrid</h3>
+                </div>
             </div>
         </div>
-    </div>
+<br>
+<br>
 
+        <div id="videos-section" class="media-group mt-5">
+            <h2 class="sub-header"><i class="fas fa-play-circle"></i> Trending Highlights</h2>
+            <div class="video-grid">
+                <div class="video-card card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/H8M2K5ESxd8/maxresdefault.jpg" alt="Match Highlights">
+                        <a href="https://youtu.be/H8M2K5ESxd8" target="_blank" class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="video-info">
+                        <h3>European Nights Highlights</h3>
+                        <p>A collection of the most dramatic moments from the latest rounds.</p>
+                        <a href="https://youtu.be/H8M2K5ESxd8" target="_blank" class="btn btn-primary-full">Watch on YouTube</a>
+                    </div>
+                </div>
+
+                <div class="video-card card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/J2PPhxLLtX8/maxresdefault.jpg" alt="Sports Highlights">
+                        <a href="https://youtu.be/J2PPhxLLtX8" target="_blank" class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="video-info">
+                        <h3>Best Goals of the Week</h3>
+                        <p>Watch the top 10 screamers from leagues around the world.</p>
+                        <a href="https://youtu.be/J2PPhxLLtX8" target="_blank" class="btn btn-primary-full">Watch on YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </main>
+
+    <script>
+        // فانكشن بسيطة للتبديل بين المحتوى
+        function filterMedia(category) {
+            const logos = document.getElementById('logos-section');
+            const videos = document.getElementById('videos-section');
+            const btns = document.querySelectorAll('.tab-btn');
+
+            btns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if (category === 'all') {
+                logos.style.display = 'block';
+                videos.style.display = 'block';
+            } else if (category === 'logos') {
+                logos.style.display = 'block';
+                videos.style.display = 'none';
+            } else {
+                logos.style.display = 'none';
+                videos.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>

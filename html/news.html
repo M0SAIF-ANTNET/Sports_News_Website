@@ -8,50 +8,85 @@
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav>
-        <div class="logo">Sports News</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">All News</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <button class="back-btn" onclick="history.back()">← Back</button>
-        <h2>All News</h2>
-
-        <div class="news-list">
-            <div class="news-card">
-                <img src="../images/meme&roro.png" alt="Messi and Ronaldo">
-                <div class="news-content">
-                    <h3>Messi &amp; Ronaldo Continue to Inspire</h3>
-                    <p>Two football legends keep making history, proving their greatness beyond generations.</p>
-                    <a href="news-details.html" class="btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="news-card">
-                <img src="../images/i❤️barca.png" alt="Barcelona">
-                <div class="news-content">
-                    <h3>Barcelona Reclaims Football Glory</h3>
-                    <p>With unstoppable form and elite performances, Barcelona is once again ruling European football.</p>
-                    <a href="news-details-1.html" class="btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="news-card">
-                <img src="../images/UEFA.png" alt="UEFA Champions League">
-                <div class="news-content">
-                    <h3>Champions League Explodes with Elite Showdowns</h3>
-                    <p>Football giants face off in brutal battles where only the strongest survive on Europe's grandest stage.</p>
-                    <a href="news-details-2.html" class="btn">Read More</a>
-                </div>
+        <div class="container nav-container">
+            <div class="logo">SPORTS<span>NEWS</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="match-center.html">Match Center</a></li>
+                <li><a href="calendar.html">Schedule</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn-login">Login</a>
+                <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
             </div>
         </div>
-    </div>
+    </nav>
 
+    <main class="container pt-4">
+        <div class="section-header">
+            <button class="btn btn-outline" onclick="history.back()" style="padding: 8px 15px;">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <h1 class="mt-2">All News</h1>
+        </div>
+
+        <div class="cards">
+            
+            <article class="card">
+                <div class="card-img">
+                    <img src="../images/meme&roro.png" alt="Messi and Ronaldo">
+                    <span class="category-tag">Legends</span>
+                </div>
+                <div class="card-body">
+                    <h3>Messi & Ronaldo Continue to Inspire</h3>
+                    <p>Two football legends keep making history, proving their greatness beyond generations.</p>
+                    <div class="card-footer">
+                        <span><i class="far fa-calendar"></i> May 2026</span>
+                        <a href="news-details.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="../images/i❤️barca.png" alt="Barcelona">
+                    <span class="category-tag">La Liga</span>
+                </div>
+                <div class="card-body">
+                    <h3>Barcelona Reclaims Football Glory</h3>
+                    <p>With unstoppable form and elite performances, Barcelona is once again ruling European football.</p>
+                    <div class="card-footer">
+                        <span><i class="far fa-calendar"></i> May 2026</span>
+                        <a href="news-details-1.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="../images/UEFA.png" alt="UEFA Champions League">
+                    <span class="category-tag">UCL</span>
+                </div>
+                <div class="card-body">
+                    <h3>Champions League Elite Showdowns</h3>
+                    <p>Football giants face off in brutal battles where only the strongest survive on Europe's grandest stage.</p>
+                    <div class="card-footer">
+                        <span><i class="far fa-calendar"></i> May 2026</span>
+                        <a href="news-details-2.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/theme_switcher.js"></script>
 </body>
 </html>
