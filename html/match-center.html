@@ -8,88 +8,102 @@
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1 class="mb-3">Match Center</h1>
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">SPORTS<span>NEWS</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="match-center.html" class="active">Match Center</a></li>
+                <li><a href="calendar.html">Schedule</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn-login">Login</a>
+                <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
 
-        <div class="cards">
+    <main class="container pt-4">
+        <div class="section-header">
+            <h1><i class="fas fa-trophy"></i> Live Scores</h1>
+            <div class="filter-btns">
+                <button class="btn btn-outline active">All</button>
+                <button class="btn btn-outline">Live</button>
+                <button class="btn btn-outline">Finished</button>
+            </div>
+        </div>
 
-            <!-- Match 1 -->
-            <div class="card match-card">
-                <div class="teams">
-                    <div>
-                        <img src="../images/al_ahly_eg.png" alt="Al Ahly Egypt" class="team-logo">
+        <div class="match-grid">
+            <div class="match-card">
+                <div class="match-info">Egyptian Premier League • <span class="status-live">75'</span></div>
+                <div class="match-main">
+                    <div class="team">
+                        <img src="../images/al_ahly_eg.png" alt="Al Ahly">
                         <h3>Al Ahly</h3>
                     </div>
-                    <div>
+                    <div class="score">
                         <h2>2 - 1</h2>
-                        <p>8:00 PM</p>
+                        <span class="match-time">08:00 PM</span>
                     </div>
-                    <div>
-                        <img src="../images/el_zamalek.png" alt="El Zamalek" class="team-logo">
+                    <div class="team">
+                        <img src="../images/el_zamalek.png" alt="Zamalek">
                         <h3>Zamalek</h3>
                     </div>
                 </div>
+                <div class="match-actions">
+                    <a href="#" class="match-link">Match Details <i class="fas fa-chevron-right"></i></a>
+                </div>
             </div>
 
-            <!-- Match 2 -->
-            <div class="card match-card">
-                <div class="teams">
-                    <div>
-                        <img src="../images/al_nasr.png" alt="Al Nassr" class="team-logo">
+            <div class="match-card">
+                <div class="match-info">Saudi Pro League • <span class="status-finished">FT</span></div>
+                <div class="match-main">
+                    <div class="team">
+                        <img src="../images/al_nasr.png" alt="Al Nassr">
                         <h3>Al Nassr</h3>
                     </div>
-                    <div>
+                    <div class="score">
                         <h2>1 - 1</h2>
-                        <p>6:30 PM</p>
+                        <span class="match-time">6:30 PM</span>
                     </div>
-                    <div>
-                        <img src="../images/al_ahly_sa.png" alt="Al Ahly Saudi" class="team-logo">
+                    <div class="team">
+                        <img src="../images/al_ahly_sa.png" alt="Al Ahly SA">
                         <h3>Al Ahly SA</h3>
                     </div>
                 </div>
+                <div class="match-actions">
+                    <a href="#" class="match-link">Highlights <i class="fas fa-play"></i></a>
+                </div>
             </div>
 
-            <!-- Match 3 -->
-            <div class="card match-card">
-                <div class="teams">
-                    <div>
-                        <img src="../images/barcelona.png" alt="Barcelona" class="team-logo">
+            <div class="match-card upcoming">
+                <div class="match-info">La Liga • <span class="status-upcoming">Today</span></div>
+                <div class="match-main">
+                    <div class="team">
+                        <img src="../images/barcelona.png" alt="Barcelona">
                         <h3>Barcelona</h3>
                     </div>
-                    <div>
-                        <h2>3 - 2</h2>
-                        <p>10:00 PM</p>
+                    <div class="score">
+                        <h2>VS</h2>
+                        <span class="match-time">10:00 PM</span>
                     </div>
-                    <div>
-                        <img src="../images/real_madrid.png" alt="Real Madrid" class="team-logo">
+                    <div class="team">
+                        <img src="../images/real_madrid.png" alt="Real Madrid">
                         <h3>Real Madrid</h3>
                     </div>
                 </div>
-            </div>
-
-            <!-- Match 4 -->
-            <div class="card match-card">
-                <div class="teams">
-                    <div>
-                        <img src="../images/arsenal.png" alt="Arsenal" class="team-logo">
-                        <h3>Arsenal</h3>
-                    </div>
-                    <div>
-                        <h2>0 - 0</h2>
-                        <p>9:15 PM</p>
-                    </div>
-                    <div>
-                        <img src="../images/liverpool.png" alt="Liverpool" class="team-logo">
-                        <h3>Liverpool</h3>
-                    </div>
+                <div class="match-actions">
+                    <a href="#" class="match-link">Set Reminder <i class="far fa-bell"></i></a>
                 </div>
             </div>
-
         </div>
-    </div>
+    </main>
 
+    <script src="../js/main.js"></script>
 </body>
 </html>

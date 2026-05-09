@@ -8,44 +8,88 @@
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1 class="mb-3">Match Schedule</h1>
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">SPORTS<span>NEWS</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="match-center.html">Match Center</a></li>
+                <li><a href="calendar.html" class="active">Schedule</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn-login">Login</a>
+                <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Match</th>
-                    <th>Time</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>May 10</td>
-                    <td>Al Ahly vs El Zamalek</td>
-                    <td>8:00 PM</td>
-                </tr>
-                <tr>
-                    <td>May 11</td>
-                    <td>Al Nassr vs Al Ahly SA</td>
-                    <td>6:30 PM</td>
-                </tr>
-                <tr>
-                    <td>May 12</td>
-                    <td>Barcelona vs Real Madrid</td>
-                    <td>10:00 PM</td>
-                </tr>
-                <tr>
-                    <td>May 13</td>
-                    <td>Arsenal vs Liverpool</td>
-                    <td>9:15 PM</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <main class="container pt-4">
+        <div class="section-header">
+            <h1><i class="fas fa-calendar-alt"></i> Match Schedule</h1>
+            <p>Stay updated with the upcoming football fixtures</p>
+        </div>
 
+        <div class="table-container">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Match Fixture</th>
+                        <th>Time (EET)</th>
+                        <th>Tournament</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="date-cell">May 10</td>
+                        <td class="match-cell">
+                            <span class="team-name">Al Ahly</span> 
+                            <span class="vs">vs</span> 
+                            <span class="team-name">Zamalek</span>
+                        </td>
+                        <td class="time-cell">08:00 PM</td>
+                        <td><span class="badge">Egyptian League</span></td>
+                    </tr>
+                    <tr>
+                        <td class="date-cell">May 11</td>
+                        <td class="match-cell">
+                            <span class="team-name">Al Nassr</span> 
+                            <span class="vs">vs</span> 
+                            <span class="team-name">Al Ahly SA</span>
+                        </td>
+                        <td class="time-cell">06:30 PM</td>
+                        <td><span class="badge">Saudi Pro League</span></td>
+                    </tr>
+                    <tr>
+                        <td class="date-cell">May 12</td>
+                        <td class="match-cell">
+                            <span class="team-name">Barcelona</span> 
+                            <span class="vs">vs</span> 
+                            <span class="team-name">Real Madrid</span>
+                        </td>
+                        <td class="time-cell">10:00 PM</td>
+                        <td><span class="badge">La Liga</span></td>
+                    </tr>
+                    <tr>
+                        <td class="date-cell">May 13</td>
+                        <td class="match-cell">
+                            <span class="team-name">Arsenal</span> 
+                            <span class="vs">vs</span> 
+                            <span class="team-name">Liverpool</span>
+                        </td>
+                        <td class="time-cell">09:15 PM</td>
+                        <td><span class="badge">Premier League</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

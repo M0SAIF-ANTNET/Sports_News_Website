@@ -3,53 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports News</title>
+    <title>Sports News | Home</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Sports News</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">All News</a></li>
-        </ul>
-    </nav>
-
-    <section class="hero">
-        <h1>Breaking Football News</h1>
-        <img src="../images/Football.png" alt="Football">
-        <p>Latest football news, live updates, and top stories worldwide.</p>
-    </section>
-
-    <div class="container">
-        <section class="news">
-            <h2>Latest News</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="../images/me&ro.png" alt="Messi and Ronaldo">
-                    <h3>Messi &amp; Ronaldo Rivalry Returns</h3>
-                    <p>Messi and Ronaldo are back... but off the pitch.</p>
-                </div>
-                <div class="card">
-                    <img src="../images/barcelon.webp" alt="Barcelona">
-                    <h3>Barcelona Dominates La Liga</h3>
-                    <p>Barcelona extends their lead with a strong performance this season ⚽</p>
-                </div>
-                <div class="card">
-                    <img src="../images/UEFA-Champions-League.png" alt="Champions League">
-                    <h3>Big Matches Ahead in Champions League</h3>
-                    <p>UCL is on fire 🔥: PSG vs Bayern &amp; Arsenal vs Atletico</p>
-                </div>
-            </div>
-            <div class="all-news-btn">
-                <a href="news.html" class="btn">Read More</a>
-            </div>
-        </section>
+    <div class="scores-ticker">
+        <div class="ticker-wrapper">
+            <div class="match-item"><span>LIV 2 - 1 RMA</span> <small>LIVE</small></div>
+            <div class="match-item"><span>BAR 3 - 0 ATM</span> <small>FT</small></div>
+            <div class="match-item"><span>MUN 1 - 1 MCI</span> <small>85'</small></div>
+            <div class="match-item"><span>PSG 0 - 2 BAY</span> <small>FT</small></div>
+            <div class="match-item"><span>LIV 2 - 1 RMA</span> <small>LIVE</small></div>
+            <div class="match-item"><span>BAR 3 - 0 ATM</span> <small>FT</small></div>
+        </div>
     </div>
 
+<nav>
+    <div class="container nav-container">
+        <div class="logo">SPORTS<span>NEWS</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="match-center.html">Match Center</a></li>
+            <li><a href="calendar.html">Schedule</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="login.html" class="btn-login">Login</a>
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Featured Story</span>
+            <h1>The Golden Era of Football Returns</h1>
+            <p>Experience the thrill of every goal, every tackle, and every moment of glory with our real-time updates.</p>
+            <div class="hero-btns">
+                <a href="#latest-news" class="btn btn-primary" style="width: auto;">Read Latest</a>
+                <a href="multimedia.html" class="btn btn-outline" style="border-color: white; color: white;">Watch Highlights</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="latest-news" class="news-section pt-4">
+            <div class="section-header">
+                <h2>Latest News</h2>
+                <a href="news.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="cards">
+                
+                <article class="card">
+                    <div class="card-img">
+                        <img src="../images/me&ro.png" alt="Messi and Ronaldo">
+                        <span class="category-tag">Analysis</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Messi & Ronaldo Rivalry Returns</h3>
+                        <p>A deep dive into how the legends are shaping the new era of global sports and what's next for their legacy.</p>
+                        <div class="card-footer">
+                            <span><i class="far fa-clock"></i> 2 hours ago</span>
+                            <a href="news-details.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="../images/barcelon.webp" alt="Barcelona">
+                        <span class="category-tag">La Liga</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Barcelona Dominates La Liga</h3>
+                        <p>With a stunning performance, Barcelona extends their lead at the top of the table after a 4-0 victory.</p>
+                        <div class="card-footer">
+                            <span><i class="far fa-clock"></i> 5 hours ago</span>
+                            <a href="news-details-1.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="../images/UEFA-Champions-League.png" alt="Champions League">
+                        <span class="category-tag">UCL</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Big Matches Ahead in UCL</h3>
+                        <p>Prepare for a night of drama as the Champions League knockout stages begin with high-stakes encounters.</p>
+                        <div class="card-footer">
+                            <span><i class="far fa-clock"></i> 8 hours ago</span>
+                            <a href="news-details-2.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="match-preview" class="pt-4">
+            <div class="section-header">
+                <h2><i class="fas fa-gamepad"></i> Match Center</h2>
+                <a href="match-center.html" class="view-all">Live Center <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="match-preview-grid">
+                <div class="mini-match-card">
+                    <div class="team">
+                        <img src="../images/liv.png" alt="Liverpool" width="30">
+                        <span>LIV</span>
+                    </div>
+                    <div class="score">2 - 1</div>
+                    <div class="team">
+                        <span>RMA</span>
+                        <img src="../images/rma.png" alt="Real Madrid" width="30">
+                    </div>
+                    <div class="match-status live">Live 75'</div>
+                </div>
+                <div class="mini-match-card">
+                    <div class="team">
+                        <img src="../images/bar.png" alt="Barca" width="30">
+                        <span>BAR</span>
+                    </div>
+                    <div class="score">3 - 0</div>
+                    <div class="team">
+                        <span>ATM</span>
+                        <img src="../images/atm.png" alt="Atletico" width="30">
+                    </div>
+                    <div class="match-status">Finished</div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="profiles-preview" class="pt-4 mb-4">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Top Players</h2>
+                <a href="profiles.html" class="view-all">View All Profiles <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="profiles-mini-list">
+                <div class="profile-thumb">
+                    <img src="../images/player1.png" alt="Player">
+                    <h4>Mo Salah</h4>
+                    <p>Stats: 22 Goals</p>
+                    <a href="profile.html">View Stats</a>
+                </div>
+                <div class="profile-thumb">
+                    <img src="../images/player2.png" alt="Player">
+                    <h4>Lamine Yamal</h4>
+                    <p>Stats: 15 Assists</p>
+                    <a href="profile.html">View Stats</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-banner">
+            <div class="db-content">
+                <h3>Your Personal Sports Dashboard</h3>
+                <p>Track your favorite teams, players, and get customized notifications.</p>
+                <a href="dashboard.html" class="btn btn-primary">Go to My Dashboard</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/theme_switcher.js"></script>
 </body>
 </html>
