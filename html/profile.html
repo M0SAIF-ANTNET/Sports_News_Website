@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 <nav>
@@ -72,48 +71,7 @@
         </div>
     </main>
 
-    <script>
-        const players = {
-            messi: {
-                name: "Lionel Messi",
-                position: "Forward | Inter Miami",
-                img: "../images/Players/Lionel-Messi.webp",
-                bio: "Argentine footballer, considered one of the greatest players in history. He has won a record 8 Ballon d'Or awards and led Argentina to World Cup glory in 2022.",
-                stats: { goals: 821, assists: 361, apps: 1047 }
-            },
-            ronaldo: {
-                name: "Cristiano Ronaldo",
-                position: "Forward | Al Nassr",
-                img: "../images/Players/cristiano.jpg",
-                bio: "Portuguese legend known for his incredible work ethic and athleticism. He is the all-time leading goalscorer in official competitions.",
-                stats: { goals: 873, assists: 249, apps: 1204 }
-            },
-            neymar: {
-                name: "Neymar Jr",
-                position: "Forward | Al Hilal",
-                img: "../images/Players/neymar.jpg",
-                bio: "Brazilian superstar famous for his elite dribbling and flair. A key player for the Brazilian national team and a Champions League winner.",
-                stats: { goals: 436, assists: 248, apps: 709 }
-            }
-        };
-
-        const params = new URLSearchParams(window.location.search);
-        const player = params.get("player");
-
-        if (players[player]) {
-            const p = players[player];
-            document.getElementById("name").innerText = p.name;
-            document.getElementById("position").innerText = p.position;
-            document.getElementById("img").src = p.img;
-            document.getElementById("bio").innerText = p.bio;
-            
-            document.getElementById("stat-goals").innerText = p.stats.goals;
-            document.getElementById("stat-assists").innerText = p.stats.assists;
-            document.getElementById("stat-apps").innerText = p.stats.apps;
-        } else {
-            window.location.href = 'players.html';
-        }
-    </script>
+ 
 <footer style="width: 100%; background-color: var(--color-secondary); color: #fff; text-align: center; padding: 20px; margin-top: 50px; box-sizing: border-box;">
     <p style="color: #fff; margin: 0;">
         &copy; 2025 HNU Sports News. All rights reserved.
@@ -129,5 +87,6 @@
         </a>
     </div>
 </footer>
+<script src="../js/playersData.js"></script>
 </body>
 </html>

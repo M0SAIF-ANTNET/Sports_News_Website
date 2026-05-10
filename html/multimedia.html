@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -38,7 +37,7 @@
 
     <main class="container pt-4">
         <div class="section-header">
-            <h1><i class="fas fa-photo-video"></i> Multimedia Hub</h1>
+            <h1>Multimedia Hub</h1>
             <p>Your destination for the latest highlights, club identities, and exclusive media content.</p>
         </div>
 
@@ -49,7 +48,7 @@
         </div>
 
         <div id="logos-section" class="media-group">
-            <h2 class="sub-header"><i class="fas fa-shield-alt"></i> Featured Clubs</h2>
+            <h2 class="sub-header">Featured Clubs</h2>
             <div class="logo-grid">
                 <div class="logo-card card">
                     <img src="../images/al_ahly_eg.png" alt="Al Ahly Egypt">
@@ -81,7 +80,7 @@
 <br>
 
         <div id="videos-section" class="media-group mt-5">
-            <h2 class="sub-header"><i class="fas fa-play-circle"></i> Trending Highlights</h2>
+            <h2 class="sub-header">Trending Highlights</h2>
             <div class="video-grid">
                 <div class="video-card card">
                     <div class="video-thumbnail">
@@ -115,29 +114,6 @@
         <br>
         <br>
     </main>
-
-    <script>
-        // فانكشن بسيطة للتبديل بين المحتوى
-        function filterMedia(category) {
-            const logos = document.getElementById('logos-section');
-            const videos = document.getElementById('videos-section');
-            const btns = document.querySelectorAll('.tab-btn');
-
-            btns.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            if (category === 'all') {
-                logos.style.display = 'block';
-                videos.style.display = 'block';
-            } else if (category === 'logos') {
-                logos.style.display = 'block';
-                videos.style.display = 'none';
-            } else {
-                logos.style.display = 'none';
-                videos.style.display = 'block';
-            }
-        }
-    </script>
 <footer style="width: 100%; background-color: var(--color-secondary); color: #fff; text-align: center; padding: 20px; margin-top: 50px; box-sizing: border-box;">
     <p style="color: #fff; margin: 0;">
         &copy; 2025 HNU Sports News. All rights reserved.
@@ -153,5 +129,8 @@
         </a>
     </div>
 </footer>
+
+<script src="../js/multimedia.js"></script>
+
 </body>
 </html>

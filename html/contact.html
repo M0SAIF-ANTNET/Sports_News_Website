@@ -7,10 +7,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact – Sports News</title>
-  <link rel="stylesheet" href="../CSS/global.css"/>
-  <link rel="stylesheet" href="../CSS/components.css"/>
-  <link rel="stylesheet" href="../CSS/layout.css"/>
-  <link rel="stylesheet" href="../CSS/responsive.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
 </head>
 <body>
   <section class="hero" style="padding: 60px 20px; background-color: var(--color-secondary);">
@@ -67,18 +67,6 @@
 
     </div>
   </div>
-  <script>
-    function submitContact() {
-      const name    = document.getElementById('name').value.trim();
-      const email   = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      if (!name || !email || !message) { alert('Please fill in all fields.'); return; }
-      document.getElementById('contactSuccess').style.display = 'block';
-      document.getElementById('name').value    = '';
-      document.getElementById('email').value   = '';
-      document.getElementById('message').value = '';
-    }
-  </script>
 <footer style="width: 100%; background-color: var(--color-secondary); color: #fff; text-align: center; padding: 20px; margin-top: 50px; box-sizing: border-box;">
     <p style="color: #fff; margin: 0;">
         &copy; 2025 HNU Sports News. All rights reserved.
@@ -95,4 +83,5 @@
     </div>
 </footer>
 </body>
+<script src="../js/contact.js"></script>
 </html>
