@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const items = document.querySelectorAll('.video-card, .player-card');
             
             items.forEach(item => {
-                if (category === 'الكل' || category === 'All') {
+                if ( category === 'All') {
                     item.style.display = 'block';
                 } else {
                     item.style.display = item.dataset.category === category ? 'block' : 'none';
